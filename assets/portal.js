@@ -1,102 +1,102 @@
-// Load Portal Gallery
+// // Load Portal Gallery
 
-dojo.require('esri.arcgis.Portal');
-dojo.require("esri.IdentityManager");
-dojo.require("dojox.lang.aspect");
+// dojo.require('esri.arcgis.Portal');
+// dojo.require("esri.IdentityManager");
+// dojo.require("dojox.lang.aspect");
 
-var displayOptions = {
-    themeName: 'gray',
-    numItemsPerPage: 999,
-    group: {
-        "owner": "gempa_lombok",
-        "title": "gallery"
-    },
-    portalUrl: 'https://essclombok.maps.arcgis.com/'
-};
-var portal;
-var group;
-var nextQueryParams;
-var queryParams;
+// var displayOptions = {
+//     themeName: 'gray',
+//     numItemsPerPage: 999,
+//     group: {
+//         "owner": "gempa_lombok",
+//         "title": "gallery"
+//     },
+//     portalUrl: 'https://essclombok.maps.arcgis.com/'
+// };
+// var portal;
+// var group;
+// var nextQueryParams;
+// var queryParams;
 
-function init() {
-    portal = new esri.arcgis.Portal(displayOptions.portalUrl);
-    dojo.connect(portal, 'onLoad', loadPortal);
-    dojox.lang.aspect.advise(portal, "queryItems", {
-        afterReturning: function (queryItemsPromise) {
-            queryItemsPromise.then(function (result) {
-                nextQueryParams = result.nextQueryParams;
-                queryParams = result.queryParams;
-            });
-        }
-    });
-}
+// function init() {
+//     portal = new esri.arcgis.Portal(displayOptions.portalUrl);
+//     dojo.connect(portal, 'onLoad', loadPortal);
+//     dojox.lang.aspect.advise(portal, "queryItems", {
+//         afterReturning: function (queryItemsPromise) {
+//             queryItemsPromise.then(function (result) {
+//                 nextQueryParams = result.nextQueryParams;
+//                 queryParams = result.queryParams;
+//             });
+//         }
+//     });
+// }
 
-function loadPortal() {
-    var params = {
-        q: 'title: ' + displayOptions.group.title + ' AND owner:' + displayOptions.group.owner
-    };
-    portal.queryGroups(params).then(function (groups) {
-        //get group title and thumbnail url
-        if (groups.results.length > 0) {
-            group = groups.results[0];
+// function loadPortal() {
+//     var params = {
+//         q: 'title: ' + displayOptions.group.title + ' AND owner:' + displayOptions.group.owner
+//     };
+//     portal.queryGroups(params).then(function (groups) {
+//         //get group title and thumbnail url
+//         if (groups.results.length > 0) {
+//             group = groups.results[0];
 
-            //Retrieve the web maps and applications from the group and display
-            var params = {
-                q: ' type: *',
-                num: displayOptions.numItemsPerPage
-            };
-            group.queryItems(params).then(updateGrid);
-        }
-    });
-}
+//             //Retrieve the web maps and applications from the group and display
+//             var params = {
+//                 q: ' type: *',
+//                 num: displayOptions.numItemsPerPage
+//             };
+//             group.queryItems(params).then(updateGrid);
+//         }
+//     });
+// }
 
-function updateGrid(queryResponse) {
-    //update the gallery to get the next page of items
+// function updateGrid(queryResponse) {
+//     //update the gallery to get the next page of items
 
-    var galleryList = dojo.byId('galleryList');
-    dojo.empty(galleryList); //empty the gallery to remove existing items
+//     var galleryList = dojo.byId('galleryList');
+//     dojo.empty(galleryList); //empty the gallery to remove existing items
 
-    //navigation buttons
+//     //navigation buttons
 
-    //Build the thumbnails for each item the thumbnail when clicked will display the web map in a template or the web application
-    var frag = document.createDocumentFragment();
-    dojo.forEach(queryResponse.results, function (item) {
-        console.log(item);
+//     //Build the thumbnails for each item the thumbnail when clicked will display the web map in a template or the web application
+//     var frag = document.createDocumentFragment();
+//     dojo.forEach(queryResponse.results, function (item) {
+//         console.log(item);
 
-        if (item.id) {
-            // var tilehref = dojo.create(
-            //     "a", {
-            //         href: item.url,
-            //         target: "_blank",
-            //         // class: "hoveredhref",
-            //     }, frag
-            // );
-              var tile = dojo.create("a", {
-                  class: 'tile',
-                  href: item.url,
-                  target: "_blank",
-              }, frag);
-            // var tile = dojo.create("div", {
-            //     class: 'tile',
-            // }, tilehref);
-            var tileMedia = dojo.create("div", {
-                class: "tile__media",
-                innerHTML: '<img class="tile__img" src="' + item.thumbnailUrl + '" alt="' + item.title +
-                    '"/>'
-            }, tile);
-            var tileDetails = dojo.create("div", {
-                class: "tile__details",
-                innerHTML: '<div class="tile__title">' + item.title + '</div>'
-            }, tile);
-        }
-    });
+//         if (item.id) {
+//             // var tilehref = dojo.create(
+//             //     "a", {
+//             //         href: item.url,
+//             //         target: "_blank",
+//             //         // class: "hoveredhref",
+//             //     }, frag
+//             // );
+//               var tile = dojo.create("a", {
+//                   class: 'tile',
+//                   href: item.url,
+//                   target: "_blank",
+//               }, frag);
+//             // var tile = dojo.create("div", {
+//             //     class: 'tile',
+//             // }, tilehref);
+//             var tileMedia = dojo.create("div", {
+//                 class: "tile__media",
+//                 innerHTML: '<img class="tile__img" src="' + item.thumbnailUrl + '" alt="' + item.title +
+//                     '"/>'
+//             }, tile);
+//             var tileDetails = dojo.create("div", {
+//                 class: "tile__details",
+//                 innerHTML: '<div class="tile__title">' + item.title + '</div>'
+//             }, tile);
+//         }
+//     });
 
-    dojo.place(frag, galleryList);
-}
+//     dojo.place(frag, galleryList);
+// }
 
-dojo.ready(init);
+// dojo.ready(init);
 
-// End Portal Gallery
+// // End Portal Gallery
 
 
 // Background Slider
