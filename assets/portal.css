@@ -734,11 +734,11 @@ a:hover {
     flex-direction: row;
     align-items: center;
     align-content: center;
-  overflow: scroll;
+  overflow: hidden;
   position: absolute;
   bottom: 50px;
   z-index: 999;
-  overflow-x: scroll;
+  overflow-x: hidden;
   left: 50%;
   transform: translate(-50%, -50%);
 }
