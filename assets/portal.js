@@ -99,74 +99,100 @@
 // // End Portal Gallery
 
 
-// Background Slider
-var counter = 0;
-var sliderPosition = 1;
-var initSlider = function() {
-    if (sliderPosition = 1) {
-        myVar = setTimeout(function () {
-            document.getElementsByClassName("page1-right")[0].click();
-            sliderPosition = 2;
-        }, 0);
-    };
-    if (sliderPosition = 2) {
-        myVar = setTimeout(function () {
-            document.getElementsByClassName("page2-right")[0].click();
-            sliderPosition = 3;
-        }, 4000);
-    };
-    if (sliderPosition = 3) {
-        myVar = setTimeout(function () {
-            document.getElementsByClassName("page3-right")[0].click();
-            sliderPosition = 4;
-        }, 8000);
-    };
-    if (sliderPosition = 4) {
-        myVar = setTimeout(function () {
-            document.getElementsByClassName("page4-right")[0].click();
-            sliderPosition = 5;
-        }, 12000);
-    };
-    if (sliderPosition = 5) {
-        myVar = setTimeout(function () {
-            sliderPosition = 1;
-        }, 16000);
-    };
-};
-initSlider();
-var i = setInterval(function () {
-    if (sliderPosition = 1) {
-        myVar = setTimeout(function () {
-            document.getElementsByClassName("page1-right")[0].click();
-            sliderPosition = 2;
-        }, 1000);
-    };
-    if (sliderPosition = 2) {
-        myVar = setTimeout(function () {
-            document.getElementsByClassName("page2-right")[0].click();
-            sliderPosition = 3;
-        }, 5000);
-    };
-    if (sliderPosition = 3) {
-        myVar = setTimeout(function () {
-            document.getElementsByClassName("page3-right")[0].click();
-            sliderPosition = 4;
-        }, 9000);
-    };
-    if (sliderPosition = 4) {
-        myVar = setTimeout(function () {
-            document.getElementsByClassName("page4-right")[0].click();
-            sliderPosition = 5;
-        }, 13000);
-    };
-    if (sliderPosition = 5) {
-        myVar = setTimeout(function () {
-            sliderPosition = 1;
-        }, 17000);
-    };
-    counter++;
-    if (counter === 50) {
-        clearInterval(i);
-    }
-}, 17000);
-// End Background Slider
+// // Background Slider
+// var counter = 0;
+// var sliderPosition = 1;
+// var initSlider = function() {
+//     if (sliderPosition = 1) {
+//         myVar = setTimeout(function () {
+//             document.getElementsByClassName("page1-right")[0].click();
+//             sliderPosition = 2;
+//         }, 0);
+//     };
+//     if (sliderPosition = 2) {
+//         myVar = setTimeout(function () {
+//             document.getElementsByClassName("page2-right")[0].click();
+//             sliderPosition = 3;
+//         }, 4000);
+//     };
+//     if (sliderPosition = 3) {
+//         myVar = setTimeout(function () {
+//             document.getElementsByClassName("page3-right")[0].click();
+//             sliderPosition = 4;
+//         }, 8000);
+//     };
+//     if (sliderPosition = 4) {
+//         myVar = setTimeout(function () {
+//             document.getElementsByClassName("page4-right")[0].click();
+//             sliderPosition = 5;
+//         }, 12000);
+//     };
+//     if (sliderPosition = 5) {
+//         myVar = setTimeout(function () {
+//             sliderPosition = 1;
+//         }, 16000);
+//     };
+// };
+// initSlider();
+// var i = setInterval(function () {
+//     if (sliderPosition = 1) {
+//         myVar = setTimeout(function () {
+//             document.getElementsByClassName("page1-right")[0].click();
+//             sliderPosition = 2;
+//         }, 1000);
+//     };
+//     if (sliderPosition = 2) {
+//         myVar = setTimeout(function () {
+//             document.getElementsByClassName("page2-right")[0].click();
+//             sliderPosition = 3;
+//         }, 5000);
+//     };
+//     if (sliderPosition = 3) {
+//         myVar = setTimeout(function () {
+//             document.getElementsByClassName("page3-right")[0].click();
+//             sliderPosition = 4;
+//         }, 9000);
+//     };
+//     if (sliderPosition = 4) {
+//         myVar = setTimeout(function () {
+//             document.getElementsByClassName("page4-right")[0].click();
+//             sliderPosition = 5;
+//         }, 13000);
+//     };
+//     if (sliderPosition = 5) {
+//         myVar = setTimeout(function () {
+//             sliderPosition = 1;
+//         }, 17000);
+//     };
+//     counter++;
+//     if (counter === 50) {
+//         clearInterval(i);
+//     }
+// }, 17000);
+// // End Background Slider
+
+
+//onemap
+$(document).ready(function(){
+    $("#areabarat").hover(function(){
+      $("#bgmaps").css("background-image", "url('./assets/bg_barat.png')");
+      $("#bgmaps").css("background-size", "cover");
+      }, function(){
+      $("#bgmaps").css("background-image", "url('./assets/bg_full.png')");
+      $("#bgmaps").css("background-size", "cover");
+    });
+    $("#areatengah").hover(function(){
+        $("#bgmaps").css("background-image", "url('./assets/bg_tengah.png')");
+        $("#bgmaps").css("background-size", "cover");
+        }, function(){
+        $("#bgmaps").css("background-image", "url('./assets/bg_full.png')");
+        $("#bgmaps").css("background-size", "cover");
+    });
+    $("#areatimur").hover(function(){
+        $("#bgmaps").css("background-image", "url('./assets/bg_timur.png')");
+        $("#bgmaps").css("background-size", "cover");
+        }, function(){
+        $("#bgmaps").css("background-image", "url('./assets/bg_full.png')");
+        $("#bgmaps").css("background-size", "cover");
+      });  
+  });

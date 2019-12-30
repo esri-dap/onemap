@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="./core/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <!-- Change this to your portal name -->
-    <title>Onemap</title> 
+    <title>onemap.id</title> 
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'
     />
     <!--     Fonts and icons     -->
@@ -47,7 +47,7 @@
             <div class="navbar-translate">
                 <!-- Portal Name (Header) and Portal Description (Tooltip) -->
                 <a class="navbar-brand" rel="tooltip" title="Local Governments Geospatial Portal" data-placement="bottom">
-                    Onemap.id
+                    onemap.id
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -61,20 +61,18 @@
 
                     <!-- Add Link to Default ArcGIS Portal -->
                     <li class="nav-item">
-                        <a class="nav-link btn" href="https://www.esri.com/training/mooc/" target="_blank">
+                        <a class="nav-link btn btn-link" href="https://www.esri.com/training/mooc/" target="_blank">
                             <p>Training Samples</p>
                         </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link btn" href="https://national-government-solution-playbook-tiger.hub.arcgis.com/" target="_blank">
+                        <a class="nav-link btn btn-link" href="https://national-government-solution-playbook-tiger.hub.arcgis.com" target="_blank">
                             <p>Portal & Apps</p>
                         </a>
                     </li>
-
                     <li class="nav-item">
-                        <a class="nav-link btn" href="https://portal.ina-sdi.or.id/" target="_blank">
-                            <p>Existing Natgov</p>
+                        <a class="nav-link btn btn-link" href="http://portal.ina-sdi.or.id/portal/home/" target="_blank">
+                            <p>Existing NatGov</p>
                         </a>
                     </li>
 
@@ -84,123 +82,29 @@
     </nav>
     <!-- End Navbar -->
 
-    <div class="slider" style="width: 100vw; height: 90vh;">
+    <div id="bgmaps" class="slider" style="width: 100vw; height: 90vh;">
 
-        <!-- to edit the slide image, go to ASSETS/PORTAL.CSS -->
+                <a href="https://west-ina.onemap.id/portal/apps/sites/#/wilayahbarat" target="_blank" id="areabarat" class="container col-md-4" style="background-color: transparent;">
 
-        <input name="control" id="page1" type="radio" checked/>
-        <input name="control" id="page2" type="radio" />
-        <input name="control" id="page3" type="radio" />
-        <input name="control" id="page4" type="radio" />
-        <div class="slider--el slider--el-1 anim-4parts">
-            <div class="slider--el-bg">
-                <div class="part top left"></div>
-                <div class="part top right"></div>
-                <div class="part bot left"></div>
-                <div class="part bot right"></div>
-            </div>
-            <div class="slider--el-content">
-                <!-- Heading for Slide 1 -->
-                <h2 class="slider--el-heading">Local Governments Geospatial Portal</h2>
-            </div>
-        </div>
-        <div class="slider--el slider--el-2 anim-9parts">
-            <div class="slider--el-bg">
-                <div class="part left-top"></div>
-                <div class="part mid-top"></div>
-                <div class="part right-top"></div>
-                <div class="part left-mid"></div>
-                <div class="part mid-mid"></div>
-                <div class="part right-mid"></div>
-                <div class="part left-bot"></div>
-                <div class="part mid-bot"></div>
-                <div class="part right-bot"></div>
-            </div>
-            <div class="slider--el-content">
-                <!-- Heading for Slide 2 -->
-                <h2 class="slider--el-heading">One Map, One Government</h2>
-            </div>
-        </div>
-        <div class="slider--el slider--el-3 anim-5parts">
-            <div class="slider--el-bg">
-                <div class="part part-1"></div>
-                <div class="part part-2"></div>
-                <div class="part part-3"></div>
-                <div class="part part-4"></div>
-                <div class="part part-5"></div>
-            </div>
-            <div class="slider--el-content">
-                <!-- Heading for Slide 3 -->
-                <h2 class="slider--el-heading">One Platform, Many Missions</h2>
-            </div>
-        </div>
-        <div class="slider--el slider--el-4 anim-3parts">
-            <div class="slider--el-bg">
-                <div class="part left"></div>
-                <div class="part mid"></div>
-                <div class="part right"></div>
-            </div>
-            <div class="slider--el-content">
-                <!-- Heading for Slide 4 -->
-                <h2 class="slider--el-heading">supported by Esri Indonesia</h2>
-            </div>
-        </div>
-        <div class="slider--control left">
-            <!-- <img style="width: 60%; " src="./assets/img/arrow-prev.png" /> -->
-            <label class="page1-left" for="page1"></label>
-            <label class="page2-left" for="page2"></label>
-            <label class="page3-left" for="page3"></label>
-            <label class="page4-left" for="page4"></label>
-        </div>
-        <div class="slider--control right">
-            <!-- <img style="width: 60%" src="./assets/img/arrow-next.png" /> -->
-            <label class="page1-right" for="page1"></label>
-            <label class="page2-right" for="page2"></label>
-            <label class="page3-right" for="page3"></label>
-            <label class="page4-right" for="page4"></label>
-        </div>
-    </div>
+                </a>
+                <a href="https://west-ina.onemap.id/portal/apps/sites/#/wilayahtengah" target="_blank" id="areatengah" class="container col-md-4" style="background-color: transparent;">
 
-    <div class="portalgallery">
-        <div class="row__inner">
-            <div class="tile" href="https://west-ina.onemap.id" target="_blank">
-                <div class="tile__media">
-                  <img class="tile__img" src="./assets/link-westina.png" alt=""  />
-                </div>
-                <div class="tile__details">
-                  <div class="tile__title">
-                    WEST-INA.onemap.id
-                  </div>
-                </div>
-              </div>
+                </a>
+                <a href="https://east-ina.onemap.id/portal/apps/sites/#/wilayahtimur" target="_blank" id="areatimur" class="container col-md-4" style="background-color: transparent;">
+
+                </a>
         
-              <div class="tile" href="https://west-ina.onemap.id" target="_blank">
-                <div class="tile__media">
-                  <img class="tile__img" src="./assets/link-midina.png" alt=""  />
-                </div>
-                <div class="tile__details">
-                  <div class="tile__title">
-                    MIDDLE-INA.onemap.id
-                  </div>
-                </div>
-              </div>
-
-              <div class="tile" href="https://west-ina.onemap.id" target="_blank">
-                <div class="tile__media">
-                  <img class="tile__img" src="./assets/link-eastina.png" alt=""  />
-                </div>
-                <div class="tile__details">
-                  <div class="tile__title">
-                    EAST-INA.onemap.id
-                  </div>
-                </div>
-              </div>
-        </div>
     </div>
+
+    <!-- <div class="portalgallery">
+        <div class="row__inner" id="galleryList">
+
+        </div>
+    </div> -->
 
 
     <footer class="footer ">
-        <a href="http://esriindonesia.co.id" class="logo-footer-esri">
+        <a href="http://esriindonesia.co.id" class="logo-footer-esri" target="_blank">
             <!-- Choose Esri Indonesia footer's logo -->
             <img class="logo-footer-img" src="./esri-full-globe-black.png" />
             <!-- <img class="logo-footer-img" src="./esri-full-plain-black.png" />
@@ -243,7 +147,7 @@
         parseOnLoad: true
     };
 </script>
-<script src="https://js.arcgis.com/3.25/"></script>
+<!-- <script src="https://js.arcgis.com/3.25/"></script> -->
 <script src="./assets/portal.js" type="text/javascript"></script>
 
 

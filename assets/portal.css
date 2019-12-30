@@ -89,6 +89,18 @@ input[type=radio] {
 .slider {
     position: relative;
     height: 100%;
+    background-image: url("bg_full.png");
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.slider .container {
+    width: auto; 
+    height: 65%;
+    margin-top: 100px;
 }
 
 .slider--control {
@@ -165,7 +177,7 @@ input[type=radio] {
     top: 0;
     width: 500%;
     height: 100%;
-    background-image: url("./1765-min.jpg");
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-1.jpg");
 }
 
 .slider--el.anim-5parts .part.part-1 {
@@ -251,7 +263,7 @@ input[type=radio] {
     background-size: cover;
     width: 300%;
     height: 300%;
-    background-image: url("./11013-min.jpg");
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-2.jpg");
 }
 
 .slider--el.anim-9parts .part.left-top {
@@ -397,7 +409,7 @@ input[type=radio] {
     background-size: cover;
     width: 300%;
     height: 100%;
-    background-image: url("./1689-min.jpg");
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-3.jpg");
 }
 
 .slider--el.anim-3parts .part.left {
@@ -455,7 +467,7 @@ input[type=radio] {
     background-size: cover;
     width: 200%;
     height: 200%;
-    background-image: url("./11021-min.jpg");
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/slider-4.jpg");
 }
 
 .slider--el.anim-4parts .part.top {
@@ -730,20 +742,14 @@ a:hover {
   width: 100%;
 }
 .portalgallery {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-  overflow: hidden;
+  overflow: scroll;
+  width: 100%;
   position: absolute;
-  bottom: 50px;
+  bottom: 70px;
   z-index: 999;
-  overflow-x: hidden;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  overflow-x: scroll;
 }
 .row__inner {
-  display: flex;
   transition: 450ms -webkit-transform;
   transition: 450ms transform;
   transition: 450ms transform, 450ms -webkit-transform;
@@ -751,7 +757,6 @@ a:hover {
   white-space: nowrap;
   margin: 70.3125px 0;
   padding-bottom: 10px;
-  width: 780px;
 }
 .tile {
   position: relative;
